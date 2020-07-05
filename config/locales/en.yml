@@ -30,4 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  not_found: 'Not Found'
+  bad_request: 'Bad Request'
+  not_suitable: "not suitable for minors '%{age}'"

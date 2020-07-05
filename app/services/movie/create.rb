@@ -20,8 +20,9 @@ module Services
 
       def make_movie
         ActiveRecord::Base.transaction do
-          result = movie_create
-          create_actors(movie_id: result.id)
+          result_movie = movie_create
+          result_actors = create_actors(movie_id: result_movie.id)
+          {movie: result_movie, actors: result_actors }
         end
       end
 

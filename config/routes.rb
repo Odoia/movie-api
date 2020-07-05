@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  resources module: 'api' do
-    resources module: 'v1' do
-      resources :movie do
-        post 'movie', :on => :collection
-      end
-    end
-  end
+  post 'api/v1/movie' => 'api/v1/movie#create'
+  get 'api/v1/movie/censure/:age' => 'api/v1/movie#show'
 end
