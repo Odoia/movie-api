@@ -21,8 +21,11 @@ module Services
       def make_movie
         ActiveRecord::Base.transaction do
           result_movie = movie_create
+          return result_movie unless result_movie.errors.blank?
+
           result_actors = create_actors(movie_id: result_movie.id)
-          { movie: result_movie, actors: result_actors }
+
+          ::Presenters::Movie.new(result_movie)
         end
       end
 

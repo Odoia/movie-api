@@ -6,10 +6,11 @@ module Api
 
       def create
         result = create_movie
-        if result
+        unless result.id.nil?
           render status: 201, json: { data: result, status: 201 }
         else
-          render_error
+          errors = result.errors.messages.map {|k,v| v }.flatten
+          render_error(msg: errors)
         end
       end
 
@@ -18,7 +19,7 @@ module Api
         unless result.blank?
           render status: 200, json: { data: result, status: 200 }
         else
-          render_error(status: 404, error:I18n.t('not_found'), msg: I18n.t('movie_not_found'))
+          render_error(status: 404, error: I18n.t('not_found'), msg: I18n.t('movie_not_found'))
         end
       end
 
@@ -34,6 +35,8 @@ module Api
 
       def movie_params
         return render_error if params[:movie].blank?
+
+        return render_error(msg: I18n.t('number_max_actors')) if params['movie']['actors']['name'].count > 10
 
         params.require(:movie).permit(
           :name, :release_date,

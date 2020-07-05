@@ -9,7 +9,7 @@ module Presenters
       @age_censure = attrs[:age_censure]
       @censorship_notice = censure_notice(attrs[:age_censure])
       @direction = attrs[:direction]
-      @actors = actor_hash(attrs.actor)
+      @actors = actor_hash(attrs.actors)
     end
 
     private

@@ -1,3 +1,4 @@
 class Actor < ApplicationRecord
-  has_one :movie, class_name: '::Movie'
+  belongs_to :movie, class_name: '::Movie'
+  validates :movie, presence: true
 end
