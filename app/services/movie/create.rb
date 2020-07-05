@@ -22,14 +22,14 @@ module Services
         ActiveRecord::Base.transaction do
           result_movie = movie_create
           result_actors = create_actors(movie_id: result_movie.id)
-          {movie: result_movie, actors: result_actors }
+          { movie: result_movie, actors: result_actors }
         end
       end
 
       def movie_create
-       result = ::Movie.new(params_to_save)
-       result.save
-       result
+        result = ::Movie.new(params_to_save)
+        result.save
+        result
       end
 
       def params_to_save

@@ -32,4 +32,8 @@
 en:
   not_found: 'Not Found'
   bad_request: 'Bad Request'
-  not_suitable: "not suitable for minors '%{age}'"
+  not_recommended: "Not recommended for children under %{age}"
+  recommended: 'Free for all ages'
+  movie_not_found: 'Movie not found'
+  age_must_be_a_integer: 'Age must be a integer'
+  blank_age: 'Param age in url is blank'
