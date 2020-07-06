@@ -54,7 +54,7 @@ module Api
       end
 
       def render_error(error: 'bad_request', status: 400, msg: '')
-        render nothing: true, status: status, json: { status: status, data: I18n.t("#{error}"), msg: msg }
+        render nothing: true, status: status, json: { status: status, data: error, msg: msg }
       end
     end
   end
