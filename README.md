@@ -26,6 +26,7 @@ IMPORTANTE NOTICE: This API is considering Brazilian's law for censure classific
 
 
 # Requests examples and given returns
-
-
-
+![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/201_created.png)
+![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_default_errors.png)
+![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_more_than_10_actors.png)
+![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_same_errors.png)
