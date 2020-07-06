@@ -20,7 +20,7 @@ describe '::Api::V1::MovieController', type: :request do
 
   context 'When use a invalid url' do
     let(:execute_actions) do
-      get '/api/v1/movie/censure/asdas', params: {}, headers: { 'ACCEPT' => 'application/json' }
+      get '/api/v1/movies/censure/asdas', params: {}, headers: { 'ACCEPT' => 'application/json' }
     end
 
     it 'must be return status 400' do
@@ -49,7 +49,7 @@ describe '::Api::V1::MovieController', type: :request do
           movie_12
           movie_10
           movie_free
-          get '/api/v1/movie/censure/18', params: {}, headers: { 'ACCEPT' => 'application/json' }
+          get '/api/v1/movies/censure/18', params: {}, headers: { 'ACCEPT' => 'application/json' }
         end
 
         it 'must be return a status 200' do
@@ -77,7 +77,7 @@ describe '::Api::V1::MovieController', type: :request do
           movie_12
           movie_10
           movie_free
-          get '/api/v1/movie/censure/16', params: {}, headers: { 'ACCEPT' => 'application/json' }
+          get '/api/v1/movies/censure/16', params: {}, headers: { 'ACCEPT' => 'application/json' }
         end
 
         it 'status must be return 200' do
@@ -105,7 +105,7 @@ describe '::Api::V1::MovieController', type: :request do
           movie_12
           movie_10
           movie_free
-          get '/api/v1/movie/censure/14', params: {}, headers: { 'ACCEPT' => 'application/json' }
+          get '/api/v1/movies/censure/14', params: {}, headers: { 'ACCEPT' => 'application/json' }
         end
 
         it 'status must be return 200' do
@@ -133,7 +133,7 @@ describe '::Api::V1::MovieController', type: :request do
           movie_12
           movie_10
           movie_free
-          get '/api/v1/movie/censure/12', params: {}, headers: { 'ACCEPT' => 'application/json' }
+          get '/api/v1/movies/censure/12', params: {}, headers: { 'ACCEPT' => 'application/json' }
         end
 
         it 'status must be return 200' do
@@ -161,7 +161,7 @@ describe '::Api::V1::MovieController', type: :request do
           movie_12
           movie_10
           movie_free
-          get '/api/v1/movie/censure/10', params: {}, headers: { 'ACCEPT' => 'application/json' }
+          get '/api/v1/movies/censure/10', params: {}, headers: { 'ACCEPT' => 'application/json' }
         end
 
         it 'status must be return 200' do
@@ -189,7 +189,7 @@ describe '::Api::V1::MovieController', type: :request do
           movie_12
           movie_10
           movie_free
-          get '/api/v1/movie/censure/9', params: {}, headers: { 'ACCEPT' => 'application/json' }
+          get '/api/v1/movies/censure/9', params: {}, headers: { 'ACCEPT' => 'application/json' }
         end
 
         it 'status must be return 200' do

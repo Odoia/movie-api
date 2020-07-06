@@ -59,7 +59,7 @@ describe '::Api::V1::MovieController', type: :request do
   context 'when create a new movie' do
     context 'when use a incomplete params' do
       let(:execute_actions) do
-        post '/api/v1/movie', params: incomplete_params, headers: { 'ACCEPT' => 'application/json'}
+        post '/api/v1/movies', params: incomplete_params, headers: { 'ACCEPT' => 'application/json'}
       end
 
       it 'status 400 must be return' do
@@ -91,14 +91,14 @@ describe '::Api::V1::MovieController', type: :request do
       end
 
       it 'msg in body -> This name already exists' do
-        post '/api/v1/movie', params: valid_params, headers: { 'ACCEPT' => 'application/json'}
-        post '/api/v1/movie', params: valid_params, headers: { 'ACCEPT' => 'application/json'}
+        post '/api/v1/movies', params: valid_params, headers: { 'ACCEPT' => 'application/json'}
+        post '/api/v1/movies', params: valid_params, headers: { 'ACCEPT' => 'application/json'}
 
         expect(body['msg'].first).to eq 'This name already exists'
       end
 
       it 'msg in body -> A film can`t have more than 10 actors' do
-        post '/api/v1/movie', params: valid_params_with_11_actors, headers: { 'ACCEPT' => 'application/json'}
+        post '/api/v1/movies', params: valid_params_with_11_actors, headers: { 'ACCEPT' => 'application/json'}
 
         expect(body['msg']).to eq 'A film can`t have more than 10 actors'
       end
@@ -106,7 +106,7 @@ describe '::Api::V1::MovieController', type: :request do
 
     context 'when use a invalid params' do
       let(:execute_actions) do
-        post '/api/v1/movie', params: invalid_params, headers: { 'ACCEPT' => 'application/json'}
+        post '/api/v1/movies', params: invalid_params, headers: { 'ACCEPT' => 'application/json'}
       end
 
       it 'status 400 must be return' do
@@ -121,7 +121,7 @@ describe '::Api::V1::MovieController', type: :request do
     context 'when use a valid params' do
 
       let(:execute_actions) do
-        post '/api/v1/movie', params: valid_params, headers: { 'ACCEPT' => 'application/json'}
+        post '/api/v1/movies', params: valid_params, headers: { 'ACCEPT' => 'application/json'}
       end
 
       it 'status 201 must be return' do
