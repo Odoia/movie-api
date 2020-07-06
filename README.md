@@ -33,5 +33,5 @@ IMPORTANTE NOTICE: This API is considering Brazilian's law for censure classific
 ![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_default_errors.png)
 3. When user try to save a movie with more than 10 actors:
 ![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_more_than_10_actors.png)
-4. When user try to sabe a movie with same name that a saved one:
+4. When user try to save a movie with same name that a saved one:
 ![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_same_errors.png)
