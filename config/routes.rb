@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  post 'api/v1/movies' => 'api/v1/movie#create'
+  get 'api/v1/movies/censure/:age' => 'api/v1/movie#show'
 end
