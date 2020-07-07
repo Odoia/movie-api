@@ -27,11 +27,13 @@ IMPORTANTE NOTICE: This API is considering Brazilian's law for censure classific
 
 # Requests examples and given returns
 
-1. When user gives the correct parameters:
+1. When user gives the correct parameters when creating a movie:
 ![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/201_created.png)
-2. When user forgot any parameter:
+2. When user forgot any parameter when creating a movie:
 ![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_default_errors.png)
 3. When user try to save a movie with more than 10 actors:
 ![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_more_than_10_actors.png)
 4. When user try to save a movie with same name that a saved one:
-![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_same_errors.png)
+![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/400_same_name.png)
+5. When user wants a list of movies:
+![](https://github.com/Odoia/movie-api/blob/make-movie/project_images/200_get_movies.png)
